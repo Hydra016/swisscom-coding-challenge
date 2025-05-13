@@ -7,12 +7,12 @@ export default {
     "module": true,
     "resourceType": "script"
   },
-  "D:/Vue Projects/frontend-coding-challenge/node_modules/nuxt/dist/app/entry.js": {
+  "D:/swisscom-coding-challenge/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
-    "file": "D:/Vue Projects/frontend-coding-challenge/node_modules/nuxt/dist/app/entry.js"
+    "file": "D:/swisscom-coding-challenge/node_modules/nuxt/dist/app/entry.js"
   }
 }

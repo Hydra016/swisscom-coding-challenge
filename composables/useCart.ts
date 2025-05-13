@@ -45,7 +45,6 @@ export const useCart = () => {
     }
   };
 
-  // Watch for changes to cartItems and update localStorage
   watch(cartItems, (newCartItems) => {
     localStorage.setItem('cartItems', JSON.stringify(newCartItems));
   }, { deep: true });

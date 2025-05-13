@@ -1,0 +1,1 @@
+function o(n,r){return n.includes(r)?n:[...n,r]}function c(n,r){return n.includes(r)?n.filter(e=>e!==r):n}function f(n,r){let e={};for(const u in n)e={...e,...r(u,n[u])};return e}export{o as a,f as o,c as r};
