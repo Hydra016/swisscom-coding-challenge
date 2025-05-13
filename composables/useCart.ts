@@ -1,5 +1,5 @@
 import { useState, watch } from '#imports';
-import type { CartItem } from '~/types';
+import type { CartItem, Product } from '~/types';
 
 export const useCart = () => {
   const isCartOpen = useState('isCartOpen', () => false);
@@ -16,7 +16,7 @@ export const useCart = () => {
     isCartOpen.value = true;
   };
 
-  const addToCart = (product: { id: number; title: string; description: string; price: number }) => {
+  const addToCart = (product: Product) => {
     const existingItem = cartItems.value.find(item => item.id === product.id);
     if (existingItem) {
       existingItem.quantity++;
