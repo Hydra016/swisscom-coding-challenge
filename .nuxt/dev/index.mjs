@@ -3,35 +3,35 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, createError, getRouterParam, readBody, getQuery as getQuery$1, getResponseStatusText } from 'file://D:/swisscom-coding-challenge/node_modules/h3/dist/index.mjs';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://D:/swisscom-coding-challenge/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import destr from 'file://D:/swisscom-coding-challenge/node_modules/destr/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://D:/swisscom-coding-challenge/node_modules/ufo/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://D:/swisscom-coding-challenge/node_modules/unhead/dist/server.mjs';
-import { isVNode, toValue, isRef } from 'file://D:/swisscom-coding-challenge/node_modules/vue/index.mjs';
-import { walkResolver } from 'file://D:/swisscom-coding-challenge/node_modules/unhead/dist/utils.mjs';
-import { klona } from 'file://D:/swisscom-coding-challenge/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://D:/swisscom-coding-challenge/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file://D:/swisscom-coding-challenge/node_modules/scule/dist/index.mjs';
-import { stringify, uneval } from 'file://D:/swisscom-coding-challenge/node_modules/devalue/index.js';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://D:/swisscom-coding-challenge/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://D:/swisscom-coding-challenge/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://D:/swisscom-coding-challenge/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://D:/swisscom-coding-challenge/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://D:/swisscom-coding-challenge/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://D:/swisscom-coding-challenge/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://D:/swisscom-coding-challenge/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://D:/swisscom-coding-challenge/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, createError, getRouterParam, readBody, getQuery as getQuery$1, getResponseStatusText } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/h3/dist/index.mjs';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import destr from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/destr/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/ufo/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/unhead/dist/server.mjs';
+import { isVNode, toValue, isRef } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/vue/index.mjs';
+import { walkResolver } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/unhead/dist/utils.mjs';
+import { klona } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/scule/dist/index.mjs';
+import { stringify, uneval } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/devalue/index.js';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://D:/swisscom-coding-challenge/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://D:/swisscom-coding-challenge/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://D:/swisscom-coding-challenge/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://D:/swisscom-coding-challenge/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://D:/swisscom-coding-challenge/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/swisscom-coding-challenge/node_modules/errx/dist/index.js';
+import { getContext } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/Vue%20Projects/frontend-coding-challenge/node_modules/errx/dist/index.js';
 
-const serverAssets = [{"baseName":"server","dir":"D:/swisscom-coding-challenge/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"D:/Vue Projects/frontend-coding-challenge/server/assets"}];
 
 const assets = createStorage();
 
@@ -43,11 +43,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/swisscom-coding-challenge","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/swisscom-coding-challenge/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/swisscom-coding-challenge/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/swisscom-coding-challenge/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"D:/swisscom-coding-challenge/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/Vue Projects/frontend-coding-challenge","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/Vue Projects/frontend-coding-challenge/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/Vue Projects/frontend-coding-challenge/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/Vue Projects/frontend-coding-challenge/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"D:/Vue Projects/frontend-coding-challenge/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -1002,13 +1002,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _w5MGo1SXihMwhYTG5PGBL83U6fe4zagTJ4sB_HmTZcY = (function(nitro) {
+const _Q2FT5U1mrBATX7Dv4bi0kylvW3lN3YVCC1Sv9wiQB8 = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "D:/swisscom-coding-challenge";
+const rootDir = "D:/Vue Projects/frontend-coding-challenge";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
@@ -1027,7 +1027,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _wvtCC7_u6IVNwrKSeGXF8gMHN3FmsN40bMkn0WakJb0 = (nitroApp) => {
+const _V08upKG6555VRIXNGc4XQr2QKFIVvzkj6I9eNGjMM = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1097,17 +1097,17 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _w5MGo1SXihMwhYTG5PGBL83U6fe4zagTJ4sB_HmTZcY,
-_wvtCC7_u6IVNwrKSeGXF8gMHN3FmsN40bMkn0WakJb0
+  _Q2FT5U1mrBATX7Dv4bi0kylvW3lN3YVCC1Sv9wiQB8,
+_V08upKG6555VRIXNGc4XQr2QKFIVvzkj6I9eNGjMM
 ];
 
-const _lazy_wPPGfF = () => Promise.resolve().then(function () { return items_get$1; });
-const _lazy_Y84HX3 = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_dGJixr = () => Promise.resolve().then(function () { return items_get$1; });
+const _lazy_9XxIXq = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/api/items', handler: _lazy_wPPGfF, lazy: true, middleware: false, method: "get" },
-  { route: '/__nuxt_error', handler: _lazy_Y84HX3, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_Y84HX3, lazy: true, middleware: false, method: undefined }
+  { route: '/api/items', handler: _lazy_dGJixr, lazy: true, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_9XxIXq, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_9XxIXq, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1510,7 +1510,7 @@ function publicAssetsURL(...path) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getClientManifest = () => import('file://D:/swisscom-coding-challenge/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file://D:/Vue%20Projects/frontend-coding-challenge/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
