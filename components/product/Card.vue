@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Product } from '@/types';
+import type { Product } from '@/types/index';
 
 function defineProps<T>() {
   throw new Error("Function not implemented.");
